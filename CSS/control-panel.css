@@ -168,6 +168,7 @@ a {
     color: var(--stroke);
     align-items: flex-end;
 }
-.footer div:hover p{
+.foo-item:hover {
     color: var(--main-color);
+    cursor: pointer;
 }
