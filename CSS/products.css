@@ -103,7 +103,7 @@ a {
 
 .search-field img {
     position: absolute;
-    top: 20%;
+    top: 30%;
     right: 36px;
     font-weight: 600;
     width: 15px;
@@ -232,7 +232,7 @@ form {
 
 form select {
     padding: 0.5rem 1rem;
-    width: 7rem;
+    width: 10rem;
     outline: none;
     margin-left: 1rem;
 }
