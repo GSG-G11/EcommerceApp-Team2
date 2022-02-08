@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart</title>
+    <link
+    href="https://fonts.googleapis.com/css?family=Roboto&display=swap"
+    rel="stylesheet"
+  />
+ 
+    <link rel="stylesheet" href="..\CSS\cart.css">
+</head>
+<body>
+     
+  
+      <!-- Cart Items -->
+      <section class="cart">
+        <table>
+          <tr>
+            <th>Product</th>
+            <th>Quantity</th>
+            <th>Subtotal</th>
+          </tr>
+          <tr class="card">
+            <td>
+              <div class="cart-info">
+                <img src="..\Images\manjo.png" alt="" />
+                <div>
+                  <p>Bambi Print Mini Backpack</p>
+                  <span>Price: $500.00</span>
+                  <br />
+                  <a href="#">remove</a>
+                </div>
+              </div>
+            </td>
+            <td><input type="number" value="1" min="1" /></td>
+            <td>$50.00</td>
+          </tr>
+          <tr class="card">
+            <td>
+              <div class="cart-info">
+                <img src="..\Images\manjo.png" alt="" />
+                <div>
+                  <p>Bambi Print Mini Backpack</p>
+                  <span>Price: $900.00</span>
+                  <br />
+                  <a href="#">remove</a>
+                </div>
+              </div>
+            </td>
+            <td><input type="number" value="1" min="1" /></td>
+            <td>$90.00</td>
+          </tr>
+          <tr class="card">
+            <td>
+              <div class="cart-info">
+                <img src="..\Images\manjo.png" alt="" />
+                <div>
+                  <p>Bambi Print Mini Backpack</p>
+                  <span>Price: $700.00</span>
+                  <br />
+                  <a href="#">remove</a>
+                </div>
+              </div>
+            </td>
+            <td><input type="number" value="1" min="1" /></td>
+            <td>$60.00</td>
+          </tr>
+                   
+        </table>
+  
+        <div class="total-price">
+          <table>
+            <tr>
+              <td>Subtotal</td>
+              <td>$200</td>
+            </tr>
+            <tr>
+              <td>Tax</td>
+              <td>$50</td>
+            </tr>
+            <tr>
+              <td>Total</td>
+              <td>$250</td>
+            </tr>
+          </table>
+          <a href="#" class="checkout btn">Proceed To Checkout</a>
+        </div>
+    </section>
+</body>
+</html>
