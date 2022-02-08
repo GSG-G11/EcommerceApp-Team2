@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -11,254 +12,200 @@
     <link rel="stylesheet" href="../CSS/products.css" />
     <link rel="stylesheet" href="../CSS/control-panel.css" />
     <title>3amo Emad</title>
-  </head>
+</head>
 
-  <body>
+<body>
     <!-- Navigation -->
     <nav class="nav">
-      <div class="container">
-        <div class="logo">
-          <a href="../HTML/control-panel.html"
-            ><img src="../Images/Logo.png" alt=""
-          /></a>
+
+        <div class="container">
+            <div class="logo">
+                <a href="../HTML/control-panel.html"><img src="../Images/Logo.png" alt="" /></a>
+            </div>
+            <div class="menu">
+                <div class="links">
+                    <a href="../HTML/control-panel.html"><span>Home</span></a>
+                    <a href="#products">Products </a>
+                    <a href="#footer">contacts</a>
+                </div>
+                <div class="search-field">
+                    <input type="text" name="search" id="search-input" />
+                    <img src="../Images/search.svg" alt="search-btn" class="search-img" />
+                </div>
+                <div class="cart-bag">
+                    <img src="../Images/shoppingBag.svg" alt="" />
+                </div>
+            </div>
+            <div class="hamburger-menu">
+                <span class="iconify" data-icon="prime:bars" style="color: #222"></span>
+                <div class="hamburger-links">
+                    <a href="../HTML/control-panel.html">Home</a>
+                    <a href="#products">Products </a>
+                    <a href="#footer">Contacts</a>
+                </div>
+            </div>
         </div>
-        <div class="menu">
-          <div class="links">
-            <a href="../HTML/control-panel.html"><span>Home</span></a>
-            <a href="#products">Products </a>
-            <a href="#footer">contacts</a>
-          </div>
-          <div class="search-field">
-            <input type="text" name="search" id="search-input" />
-            <img
-              src="../Images/search.svg"
-              alt="search-btn"
-              class="search-img"
-            />
-          </div>
-          <div class="cart-bag">
-            <img src="../Images/shoppingBag.svg" alt="" />
-          </div>
-        </div>
-        <div class="hamburger-menu">
-          <span
-            class="iconify"
-            data-icon="prime:bars"
-            style="color: #222"
-          ></span>
-          <div class="hamburger-links">
-            <a href="../HTML/control-panel.html">Home</a>
-            <a href="#products">Products </a>
-            <a href="#footer">contacts</a>
-          </div>
-        </div>
-      </div>
     </nav>
 
     <!-- end nav bar -->
     <div class="products-container">
-      <div class="products-side">
-        <div class="head-product">
-          <h3>Hello Seller!</h3>
-          <button id="myBtn" class="add-product">Add Product</button>
-          <!-- The Modal -->
-          <form id="myModal" class="modal">
-            <!-- Modal content -->
-            <div class="modal-content">
-              <span class="close">&times;</span>
-              <table>
-                <tr>
-                  <td>
-                    <label for="name">Name:</label>
-                  </td>
-                  <td>
-                    <input
-                      type="text"
-                      id="name"
-                      name="name"
-                      placeholder="Enter name"
-                    />
-                  </td>
-                </tr>
-                <tr>
-                  <td>
-                    <label for="price">Price:</label>
-                  </td>
-                  <td>
-                    <input
-                      type="text"
-                      id="price"
-                      name="price"
-                      placeholder="Enter price"
-                    />
-                  </td>
-                </tr>
+        <div class="products-side">
+            <div class="head-product">
+                <h3>Hello Seller!</h3>
+                <button id="myBtn" class="add-product">Add Product</button>
+                <!-- The Modal -->
+                <form id="myModal" class="modal">
+                    <!-- Modal content -->
+                    <div class="modal-content">
+                        <span class="close">&times;</span>
+                        <table>
+                            <tr>
+                                <td>
+                                    <label for="name">Name:</label>
+                                </td>
+                                <td>
+                                    <input type="text" id="name" name="name" placeholder="Enter name" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <label for="price">Price:</label>
+                                </td>
+                                <td>
+                                    <input type="text" id="price" name="price" placeholder="Enter price" />
+                                </td>
+                            </tr>
 
-                <tr>
-                  <td>
-                    <label for="image">Image URL:</label>
-                  </td>
-                  <td>
-                    <input
-                      type="text"
-                      id="image"
-                      name="image"
-                      placeholder="Enter image"
-                    />
-                  </td>
-                </tr>
-                <tr>
-                  <td>
-                    <label>Category:</label>
-                  </td>
-                  <td>
-                    <select name="" id="">
-                      <option value="Fruits">Fruits</option>
-                      <option value="Legum">Legum</option>
-                      <option value="Vegetables">Vegetables</option>
-                    </select>
-                  </td>
-                </tr>
-                <tr>
-                  <td>
-                    <label>Description:</label>
-                  </td>
-                  <td>
-                    <textarea
-                      name=""
-                      id=""
-                      cols="30"
-                      rows="10"
-                      placeholder="Enter description"
-                    ></textarea>
-                  </td>
-                </tr>
-              </table>
-              <button id="formInput">Add Item</button>
+                            <tr>
+                                <td>
+                                    <label for="image">Image URL:</label>
+                                </td>
+                                <td>
+                                    <input type="text" id="image" name="image" placeholder="Enter image" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <label>Category:</label>
+                                </td>
+                                <td>
+                                    <select name="" id="">
+                    <option value="Fruits">Fruits</option>
+                    <option value="Legum">Legum</option>
+                    <option value="Vegetables">Vegetables</option>
+                  </select>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <label>Description:</label>
+                                </td>
+                                <td>
+                                    <textarea name="" id="" cols="30" rows="10" placeholder="Enter description"></textarea>
+                                </td>
+                            </tr>
+                        </table>
+                        <button id="formInput">Add Item</button>
+                    </div>
+                </form>
             </div>
-          </form>
-        </div>
 
-        <div class="products">
-          <!-- /* we will add these products using JS */ -->
-          <div class="product">
-            <img
-              class="product-img"
-              src=" ../Images/product-1.jpg "
-              alt="Product Item "
-            />
-            <h4 class="product-name">Manjo Maya</h4>
-            <p class="product-desc">
-              Lorem ipsum dolor sit amet consct, etur adipiscing elit Nunc
-              vulputate etur adipiscing elit Nunc vulputate.
-            </p>
-            <h5 class="product-price">$2.00</h5>
-            <i class="fas fa-trash-can"></i>
-            <i class="fas fa-pencil"></i>
-          </div>
-          <!-- ./product -->
-          <div class="product">
-            <img
-              class="product-img"
-              src=" ../Images/product-1.jpg "
-              alt="Product Item "
-            />
-            <h4 class="product-name">Manjo Maya</h4>
-            <p class="product-desc">
-              Lorem ipsum dolor sit amet consct, etur adipiscing elit Nunc
-              vulputate etur adipiscing elit Nunc vulputate.
-            </p>
-            <h5 class="product-price">$2.00</h5>
-            <i class="fas fa-trash-can"></i>
-            <i class="fas fa-pencil"></i>
-          </div>
-          <!-- ./product -->
-          <div class="product">
-            <img
-              class="product-img"
-              src=" ../Images/product-1.jpg "
-              alt="Product Item "
-            />
-            <h4 class="product-name">Manjo Maya</h4>
-            <p class="product-desc">
-              Lorem ipsum dolor sit amet consct, etur adipiscing elit Nunc
-              vulputate etur adipiscing elit Nunc vulputate.
-            </p>
-            <h5 class="product-price">$2.00</h5>
-            <i class="fas fa-trash-can"></i>
-            <i class="fas fa-pencil"></i>
-          </div>
-          <!-- ./product -->
-          <div class="product">
-            <img
-              class="product-img"
-              src=" ../Images/product-1.jpg "
-              alt="Product Item "
-            />
-            <h4 class="product-name">Manjo Maya</h4>
-            <p class="product-desc">
-              Lorem ipsum dolor sit amet consct, etur adipiscing elit Nunc
-              vulputate etur adipiscing elit Nunc vulputate.
-            </p>
-            <h5 class="product-price">$2.00</h5>
-            <i class="fas fa-trash-can"></i>
-            <i class="fas fa-pencil"></i>
-          </div>
-          <!-- ./product -->
-          <div class="product">
-            <img
-              class="product-img"
-              src=" ../Images/product-1.jpg "
-              alt="Product Item "
-            />
-            <h4 class="product-name">Manjo Maya</h4>
-            <p class="product-desc">
-              Lorem ipsum dolor sit amet consct, etur adipiscing elit Nunc
-              vulputate etur adipiscing elit Nunc vulputate.
-            </p>
-            <h5 class="product-price">$2.00</h5>
-            <i class="fas fa-trash-can"></i>
-            <i class="fas fa-pencil"></i>
-          </div>
-          <!-- ./product -->
+            <div class="products">
+                <!-- /* we will add these products using JS */ -->
+                <div class="product">
+                    <img class="product-img" src=" ../Images/product-1.jpg " alt="Product Item " />
+                    <h4 class="product-name">Manjo Maya</h4>
+                    <p class="product-desc">
+                        Lorem ipsum dolor sit amet consct, etur adipiscing elit Nunc vulputate etur adipiscing elit Nunc vulputate.
+                    </p>
+                    <h5 class="product-price">$2.00</h5>
+                    <i class="fas fa-trash-can"></i>
+                    <i class="fas fa-pencil"></i>
+                </div>
+                <!-- ./product -->
+                <div class="product">
+                    <img class="product-img" src=" ../Images/product-1.jpg " alt="Product Item " />
+                    <h4 class="product-name">Manjo Maya</h4>
+                    <p class="product-desc">
+                        Lorem ipsum dolor sit amet consct, etur adipiscing elit Nunc vulputate etur adipiscing elit Nunc vulputate.
+                    </p>
+                    <h5 class="product-price">$2.00</h5>
+                    <i class="fas fa-trash-can"></i>
+                    <i class="fas fa-pencil"></i>
+                </div>
+                <!-- ./product -->
+                <div class="product">
+                    <img class="product-img" src=" ../Images/product-1.jpg " alt="Product Item " />
+                    <h4 class="product-name">Manjo Maya</h4>
+                    <p class="product-desc">
+                        Lorem ipsum dolor sit amet consct, etur adipiscing elit Nunc vulputate etur adipiscing elit Nunc vulputate.
+                    </p>
+                    <h5 class="product-price">$2.00</h5>
+                    <i class="fas fa-trash-can"></i>
+                    <i class="fas fa-pencil"></i>
+                </div>
+                <!-- ./product -->
+                <div class="product">
+                    <img class="product-img" src=" ../Images/product-1.jpg " alt="Product Item " />
+                    <h4 class="product-name">Manjo Maya</h4>
+                    <p class="product-desc">
+                        Lorem ipsum dolor sit amet consct, etur adipiscing elit Nunc vulputate etur adipiscing elit Nunc vulputate.
+                    </p>
+                    <h5 class="product-price">$2.00</h5>
+                    <i class="fas fa-trash-can"></i>
+                    <i class="fas fa-pencil"></i>
+                </div>
+                <!-- ./product -->
+                <div class="product">
+                    <img class="product-img" src=" ../Images/product-1.jpg " alt="Product Item " />
+                    <h4 class="product-name">Manjo Maya</h4>
+                    <p class="product-desc">
+                        Lorem ipsum dolor sit amet consct, etur adipiscing elit Nunc vulputate etur adipiscing elit Nunc vulputate.
+                    </p>
+                    <h5 class="product-price">$2.00</h5>
+                    <i class="fas fa-trash-can"></i>
+                    <i class="fas fa-pencil"></i>
+                </div>
+                <!-- ./product -->
+            </div>
         </div>
-      </div>
-      <!-- ./products-side -->
+        <!-- ./products-side -->
     </div>
     <!-- ./products-container -->
 
     <!--start footer -->
     <footer class="footer">
-      <div class="footer-list">
-        <h3>Extras</h3>
-        <p class="foo-item">Brand</p>
-        <p class="foo-item">specials</p>
-      </div>
-      <div class="footer-list">
-        <h3>Information</h3>
-        <p class="foo-item">about us</p>
-        <p class="foo-item">contact us</p>
-      </div>
-      <div class="footer-list">
-        <h3>Account</h3>
-        <p class="foo-item">my account</p>
-        <p class="foo-item">wish list</p>
-      </div>
+        <div class="footer-list">
+            <h3>Extras</h3>
+            <p class="foo-item">Brand</p>
+            <p class="foo-item">specials</p>
+        </div>
+        <div class="footer-list">
+            <h3>Information</h3>
+            <p class="foo-item">about us</p>
+            <p class="foo-item">contact us</p>
+        </div>
+        <div class="footer-list">
+            <h3>Account</h3>
+            <p class="foo-item">my account</p>
+            <p class="foo-item">wish list</p>
+        </div>
     </footer>
     <!--end footer -->
 
     <!-- Font Awesome Script -->
     <script>
-      function fontAwesome() {
-        const css = document.createElement("link");
-        css.href =
-          "https://pro.fontawesome.com/releases/v6.0.0-beta3/css/all.css";
-        css.rel = "stylesheet";
-        css.type = "text/css";
-        document.getElementsByTagName("head")[0].appendChild(css);
-      }
-      fontAwesome();
+        function fontAwesome() {
+            const css = document.createElement("link");
+            css.href =
+                "https://pro.fontawesome.com/releases/v6.0.0-beta3/css/all.css";
+            css.rel = "stylesheet";
+            css.type = "text/css";
+            document.getElementsByTagName("head")[0].appendChild(css);
+        }
+        fontAwesome();
     </script>
     <script src="..\JS\seller.js"></script>
-  </body>
+</body>
+
 </html>
