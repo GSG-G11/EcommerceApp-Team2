@@ -18,12 +18,13 @@ body {
   color: var(--black);
 }
 
-/* Cart Page */
+/* Start Of Cart Page */
 
 
 .cart {
   margin: 20rem auto;
   padding: 0 3rem;
+  max-width: 1200px;
 }
 
 .card{
