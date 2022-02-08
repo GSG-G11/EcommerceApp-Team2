@@ -1,0 +1,84 @@
+/* Fonts */
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+/* Variables */
+
+:root {
+    --main-color: #69ae14;
+    --stroke: #c4c4c4;
+    --dark-gray: #222;
+    --white: #fff;
+    --desc: #938B8B;
+}
+
+
+/* General Style */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+    font-size: 1.2rem;
+    background-color: var(--white);
+    color: var(--black);
+}
+
+.products {
+    margin-top: 1.5rem;
+}
+
+.products-container {
+    height: 100vh;
+    width: 95%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+}
+
+.products-side {
+    height: 100vh;
+    grid-column: 2/12;
+    margin-left: 1rem;
+}
+
+.head-product {
+    margin: 4rem 4rem 3rem 4rem;
+    font-size: 2rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.add-product {
+    display: inline;
+    background-color: var(--main-color);
+    border: none;
+    color: var(--white);
+    font-size: 1.2rem;
+    font-weight: 900;
+    padding: 0.7rem;
+    border-radius: 10px;
+}
+
+.fa-trash-can,
+.fa-pencil {
+    background-color: var(--main-color);
+    color: var(--white);
+    padding: 0.5rem;
+    margin-top: 0.6rem;
+}
+
+.fa-trash-can :hover,
+.fa-pencil:hover {
+    background-color: #a3d862e7;
+    color: var(--dark-gray);
+}
+
+.product-price {
+    margin-right: 7rem;
+}
