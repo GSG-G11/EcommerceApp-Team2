@@ -1,0 +1,22 @@
+{
+    "name": "ecommerceapp-team2",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "test": "jest --watch"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/GSG-G11/EcommerceApp-Team2.git"
+    },
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/GSG-G11/EcommerceApp-Team2/issues"
+    },
+    "homepage": "https://github.com/GSG-G11/EcommerceApp-Team2#readme",
+    "dependencies": {
+        "jest": "^27.5.1"
+    }
+}
