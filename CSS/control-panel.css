@@ -1,0 +1,161 @@
+:root {
+  --main-color: #69ae14;
+  --stroke: #c4c4c4;
+  --dark-gray: #222;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-size: 1.6rem;
+  background-color: var(--white);
+  color: var(--black);
+  font-weight: 400;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-weight: 600;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.nav {
+  position: fixed;
+  width: 100%;
+  box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.6);
+}
+
+.container {
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 2rem 6rem;
+  grid-template-columns: repeat(12, 1fr);
+}
+
+.menu {
+  display: flex;
+  align-items: center;
+}
+
+.menu .links {
+  padding: 0 1.5rem;
+  margin: auto 0.5rem;
+  font-weight: 600;
+}
+
+.links a {
+  margin: auto 0.5rem;
+  transition: all 0.5s ease-in-out;
+}
+
+.links a span {
+  color: var(--main-color);
+  transition: all 0.5s ease-in-out;
+}
+
+.links a:hover {
+  color: var(--main-color);
+}
+
+.links span:hover {
+  color: black;
+}
+
+.search-field {
+  padding: 0 1.5rem;
+  position: relative;
+}
+
+#search-input {
+  width: 15rem;
+  padding: 0.3rem;
+  border: 1px solid var(--stroke);
+}
+
+#search-input:focus {
+  outline: none;
+}
+
+.search-field img {
+  position: absolute;
+  top: 15%;
+  right: 20px;
+  font-weight: 600;
+}
+
+.cart-bag {
+  position: relative;
+}
+
+.cart-bag span {
+  position: absolute;
+  top: -40%;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  text-align: center;
+  color: #fff;
+  font-weight: 600;
+  background-color: var(--main-color);
+}
+
+.hamburger-menu {
+  font-size: 3rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  position: relative;
+  display: none;
+}
+
+.hamburger-links {
+  position: absolute;
+  background-color: #fff;
+  border: 1px solid var(--stroke);
+  font-size: 2rem;
+  width: 25vw;
+  height: 25vh;
+  top: 75%;
+  right: 75%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+  transition: all 0.5s ease-in-out;
+  display: none;
+}
+
+.hamburger-links a:hover {
+  color: var(--main-color);
+}
+
+@media (max-width: 850px) {
+  .menu {
+    display: none;
+  }
+  .hamburger-menu {
+    display: flex;
+  }
+}
