@@ -9,7 +9,6 @@
 *::after {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
 }
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
 
@@ -24,6 +23,7 @@ body {
   background-color: var(--white);
   color: var(--black);
   font-weight: 400;
+  
 }
 
 h1,
@@ -40,9 +40,9 @@ a {
 }
 
 .nav {
-  position: fixed;
   width: 100%;
   box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.6);
+  padding: .1rem;
 }
 
 .container {
@@ -158,4 +158,17 @@ a {
   .hamburger-menu {
     display: flex;
   }
+}
+/* footer */
+.footer{
+    display: flex;
+    justify-content: space-around;
+    background-color: var(--dark-gray);
+    padding: 5vh;
+    color: var(--stroke);
+    align-items: flex-end;
+}
+.foo-item:hover {
+    color: var(--main-color);
+    cursor: pointer;
 }
