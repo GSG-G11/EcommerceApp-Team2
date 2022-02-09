@@ -10,4 +10,11 @@ function searchByName(array,string) {
    }
 }
  
-module.exports = { addData, searchByName};
+// craete function to delete the card 
+function deleteCard(arr, id) {
+  return arr.filter((item) => {
+    return item.id !== id
+  })
+}
+
+module.exports = { addData, searchByName,deleteCard};
