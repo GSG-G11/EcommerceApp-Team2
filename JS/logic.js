@@ -1,6 +1,27 @@
+// functions of the cart
+let cartArr = localStorage.getItem("cart")
+  ? JSON.parse(localStorage.getItem("cart"))
+  : [];
+
+function removeELment(index) {
+  let element = document.getElementById(`tr-${index}`);
+  cartArr = removeItem(index, cartArr);
+  localStorage.setItem("cart", JSON.stringify(cartArr));
+
+  element.remove();
+}
+
+const removeItem = (index, arr) => {
+  let copy = arr.filter((item) => item.id !== index);
+  return copy;
+};
+
+
 function addData(arr, obj) {
     return [...arr, obj];
 }
+
+
 // search function
 function searchByName(array, string) {
     for (let i = 0; i < array.length; i++) {

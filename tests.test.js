@@ -51,7 +51,6 @@ describe("delete item from the array", () => {
   });
 });
 
-
 describe("Should Edit Item value", () => {
   test("Should Edit Item value", () => {
     const actual = editCard("1", "price", 50.0, [
@@ -90,6 +89,20 @@ describe("Should Edit Item value", () => {
   });
 });
 
-
-
+describe("delete item from the cart array by filtering", () => {
+  test("test remove item from the array products", () => {
+    const actual = removeItem(3, [
+      { id: 1, name: "nabil" },
+      { id: 2, name: "mohamed" },
+      { id: 3, name: "ibrahim" },
+      { id: 4, name: "nada" },
+    ]);
+    const expected = [
+      { id: 1, name: "nabil" },
+      { id: 2, name: "mohamed" },
+      { id: 4, name: "nada" },
+    ];
+    expect(actual).toEqual(expected);
+  });
+});
 
