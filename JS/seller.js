@@ -7,6 +7,9 @@ var btn = document.getElementById("myBtn");
 // Get the <span> element that closes the modal
 var span = document.getElementsByClassName("close")[0];
 
+// Get the add  data function
+const { addData } = require("./JS/logic.js");
+
 // When the user clicks the button, open the modal
 btn.onclick = function () {
   modal.style.display = "block";
@@ -23,3 +26,14 @@ window.onclick = function (event) {
     modal.style.display = "none";
   }
 };
+
+// create function to save the arrray of object to localstorage
+function addToLocalstorage(arr) {
+  let cardsArray = arr;
+
+  // check if theres nothing saved in the storage and if not set the arr of object to cardsArray
+  if (localStorage.getItem("cardsArray") == null) {
+    localStorage.setItem("cardsArray", JSON.stringify(cardsArray));
+  }
+}
+addToLocalstorage(addData)
