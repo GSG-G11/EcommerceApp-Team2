@@ -1,4 +1,9 @@
-const { addData, searchByName, editCard } = require("./JS/logic.js");
+const {
+  addData,
+  searchByName,
+  deleteCard,
+  editCard,
+} = require("./JS/logic.js");
 
 describe("add data to array", () => {
   test("test add data to the array products", () => {
@@ -22,6 +27,26 @@ describe("search products via name", () => {
       "salad"
     );
     const expected = [{ id: 2, name: "salad" }];
+    expect(actual).toEqual(expected);
+  });
+});
+
+describe("delete item from the array", () => {
+  test("test remove item from the array products", () => {
+    const actual = deleteCard(
+      [
+        { id: 1, name: "nabil" },
+        { id: 2, name: "mohamed" },
+        { id: 3, name: "ibrahim" },
+        { id: 4, name: "nada" },
+      ],
+      2
+    );
+    const expected = [
+      { id: 1, name: "nabil" },
+      { id: 3, name: "ibrahim" },
+      { id: 4, name: "nada" },
+    ];
     expect(actual).toEqual(expected);
   });
 });
