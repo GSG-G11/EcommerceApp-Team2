@@ -8,6 +8,13 @@ const imageInput = document.getElementById("image");
 const categoryInput = document.getElementById("category");
 const addItem = document.getElementById("formInput");
 const description = document.getElementById("textarea");
+// cart dom functions
+const table = document.getElementsByTagName("table")[0];
+const checkoutDiv = document.getElementsByClassName("total-price")[0];
+let subtotal = document.getElementById("subtotal");
+const tax = document.getElementById("tax");
+const total = document.getElementById("whole-total");
+let subtotalNum = 0;
 
 addItem.addEventListener("click", (e) => {
   let cardsArray = [];
@@ -35,10 +42,113 @@ addItem.addEventListener("click", (e) => {
     window.location.reload();    
 });
 
+window.onload = function() {
+    if (localStorage.getItem("cart")) {
+        let cartArray = JSON.parse(localStorage.getItem("cart"));
+        checkoutDiv.style.display = "flex";
+
+
+        for (let i = 0; i < cartArray.length; i++) {
+
+            const price = cartArray[i].price
+            let totalPriceOfItem = price
+
+            const tableRow = document.createElement("tr");
+            tableRow.setAttribute("id", `tr-${cartArray[i].id}`);
+
+            tableRow.classList.add("card");
+            const tdInfo = document.createElement("td");
+            const cardDetailsDiv = document.createElement("div");
+            cardDetailsDiv.classList.add("cart-info");
+            const productImage = document.createElement("img");
+            productImage.setAttribute("src", `${cartArray[i].image}`);
+
+            const infoDiv = document.createElement("div");
+            const productName = document.createElement("p");
+            productName.innerText = `${cartArray[i].name}`;
+            const productPrice = document.createElement("span");
+            productPrice.innerText = `Price: $${cartArray[i].price}`;
+            const breakIt = document.createElement("br");
+            const removeBtn = document.createElement("a");
+            removeBtn.setAttribute("id", `btn-${cartArray[i].id}`);
+            removeBtn.textContent = "Remove";
+            removeBtn.onclick = function() { removeELment(cartArray[i].id) };
+
+            const tdQuantity = document.createElement("td");
+            let quantityInput = document.createElement("input");
+            quantityInput.setAttribute("type", "number");
+            quantityInput.setAttribute("min", "1");
+            quantityInput.setAttribute("value", "1");
+            quantityInput.addEventListener("change", () => {
+                let oldPrice = totalPriceOfItem;
+                totalPriceOfItem = price * Number(quantityInput.value);
+                tdTotal.innerHTML = "$" + parseInt(totalPriceOfItem).toFixed(2);
+
+                subtotalNum += totalPriceOfItem - oldPrice;
+
+                subtotal.textContent = "$" + parseInt(subtotalNum).toFixed(2);
+                tax.textContent = "$" + (parseInt(subtotalNum) * 0.08).toFixed(2);
+                total.textContent = "$" + ((parseInt(subtotalNum) * 0.08) + parseInt(subtotalNum)).toFixed(2);
+            })
+
+            let tdTotal = document.createElement("td");
+            tdTotal.textContent = "$" + parseInt(totalPriceOfItem).toFixed(2);
+
+            infoDiv.appendChild(productName);
+            infoDiv.appendChild(productPrice);
+            infoDiv.appendChild(breakIt);
+            infoDiv.appendChild(removeBtn);
+
+            cardDetailsDiv.appendChild(productImage);
+            cardDetailsDiv.appendChild(infoDiv);
+
+            tdInfo.appendChild(cardDetailsDiv);
+
+            tdQuantity.appendChild(quantityInput);
+
+            // tdTotal.appendChild(document.createTextNode("$0"));
+
+            tableRow.appendChild(tdInfo);
+            tableRow.appendChild(tdQuantity);
+            tableRow.appendChild(tdTotal);
+
+            table.appendChild(tableRow);
+
+            subtotalNum += totalPriceOfItem;
+
+        }
+
+    } else {
+
+        const para = document.createElement("p");
+        para.classList.add("empty-cart");
+        const textNode = document.createTextNode("Your cart is empty :(");
+        para.appendChild(textNode);
+        table.appendChild(para);
+        checkoutDiv.style.display = "none";
+
+    }
+
+    console.log(subtotalNum)
+    subtotal.textContent = "$" + parseInt(subtotalNum).toFixed(2);
+    tax.textContent = "$" + (parseInt(subtotalNum) * 0.08).toFixed(2);
+    total.textContent = "$" + ((parseInt(subtotalNum) * 0.08) + parseInt(subtotalNum)).toFixed(2);
+
+};
+
 
 // Display Produtcs
+let cardsArray = localStorage.getItem('cardsArray') ? JSON.parse(localStorage.getItem('cardsArray')) : [];
 
 let cardsArray = JSON.parse(localStorage.getItem("cardsArray"));
+// Add to cart
+let cartArr = localStorage.getItem('cart') ? JSON.parse(localStorage.getItem('cart')) : [];
+
+function addToCart(id) {
+    let clickedItem = cardsArray.find((item) => item.id === id);
+    cartArr = [...cartArr, clickedItem];
+    localStorage.setItem('cart', JSON.stringify(cartArr));
+}
 
 function renderProducts(cardsArray) {
   if (cardsArray != null) {
