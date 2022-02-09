@@ -45,3 +45,10 @@ function editCard(id, property, replaceValue, modifiedProducts) {
         return ele;
     });
 };
+
+function newFiltered(arr) {
+    const newArray = arr.filter(function(el) {
+        return el.price >= 10;
+    });
+    return newArray;
+}

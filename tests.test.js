@@ -143,3 +143,19 @@ describe("Filter products via price", () => {
         expect(actual).toEqual(expected);
     });
 });
+
+describe("filter the array of the products that have price less than 10", () => {
+    test("test remove item that has a price lower than 10", () => {
+        const actual = newFiltered([
+            { name: "tomato", price: 12 },
+            { name: "cucomber", price: 10 },
+            { name: "apple", pric: 8 },
+            { name: "banana", price: 5 },
+        ]);
+        const expected = [
+            { name: "tomato", price: 12 },
+            { name: "cucomber", price: 10 },
+        ];
+        expect(actual).toEqual(expected);
+    });
+});
