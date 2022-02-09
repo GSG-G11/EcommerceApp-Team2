@@ -1,20 +1,24 @@
 function boxesCheck() {
-  let ARRR = newFiltered(data);
-  // console.log(newArray)
-  const checkbox = document.querySelectorAll("input[type=checkbox]");
-  console.log(checkbox);
-  checkbox.addEventListener("change", function () {});
+    let ARRR = newFiltered(data);
+    // console.log(newArray)
+    const checkbox = document.querySelectorAll("input[type=checkbox]");
+    console.log(checkbox);
+    checkbox.addEventListener("change", function() {});
 }
 
 boxesCheck();
 
-////////////////////
-let cartArr = localStorage.getItem("cart")
-  ? JSON.parse(localStorage.getItem("cart"))
-  : [];
+let gridView = document.getElementById('gridView');
+let listView = document.getElementById('listView');
+let productss = document.getElementsByClassName('products')[0];
 
-function addToCart(id) {
-  let clickedItem = cardsArray.find((item) => item.id === id);
-  cartArr = [...cartArr, clickedItem];
-  localStorage.setItem("cart", JSON.stringify(cartArr));
-}
+// Toggle products view (grid | list)
+gridView.onclick = () => {
+    productss.classList.remove("list");
+    productss.classList.add("grid");
+};
+
+listView.onclick = () => {
+    productss.classList.remove("grid");
+    productss.classList.add("list");
+};
