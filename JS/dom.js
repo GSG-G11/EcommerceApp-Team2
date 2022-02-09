@@ -2,6 +2,16 @@ let gridView = document.getElementById('gridView');
 let listView = document.getElementById('listView');
 let products = document.getElementsByClassName('products')[0];
 
+
+let lessthan10 = document.getElementById("lessThan10");
+
+const Upto20 = document.getElementById("upTo20");
+const Upto30 = document.getElementById("upTo30");
+const Upto40 = document.getElementById("upTo40");
+const Upto50 = document.getElementById("upTo50");
+// const price1 = parseInt(document.getElementById("product-price1").value)
+const price = document.getElementsByClassName
+
 // Toggle products view (grid | list)
 gridView.onclick = () => {
     products.classList.remove("list");
@@ -31,6 +41,7 @@ function convert(item) {
     img.src = item.image;
     img.alt = "Image";
 
+    const prod = document.getElementById("products");
     const details = document.createElement('div');
     details.className = "details";
 

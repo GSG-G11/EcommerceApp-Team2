@@ -12,7 +12,9 @@
     --desc: #938B8B;
 }
 
-
+.hide {
+    display: none;
+}
 /* General Style */
 
 * {
