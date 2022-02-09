@@ -4,7 +4,6 @@ let cartArr = localStorage.getItem("cart")
   : [];
 
 function removeELment(index) {
-//   subtotalNum -= cartArr[index].price * quantityInput.value;
   let element = document.getElementById(`tr-${index}`);
   cartArr = removeItem(index, cartArr);
   localStorage.setItem("cart", JSON.stringify(cartArr));

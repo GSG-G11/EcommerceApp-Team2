@@ -108,30 +108,22 @@ window.onload = function () {
 
   } else {
 
-    // const para = document.createElement("p");
-    // para.classList.add("empty-cart");
-    // const textNode = document.createTextNode("Your cart is empty :(");
-    // para.appendChild(textNode);
-    // table.appendChild(para);
-    // checkoutDiv.style.display = "none";
+    const para = document.createElement("p");
+    para.classList.add("empty-cart");
+    const textNode = document.createTextNode("Your cart is empty :(");
+    para.appendChild(textNode);
+    table.appendChild(para);
+    checkoutDiv.style.display = "none";
 
   }
 
-  
+  console.log(subtotalNum)
   subtotal.textContent = "$" + parseInt(subtotalNum).toFixed(2);
   tax.textContent = "$" + (parseInt(subtotalNum)* 0.08 ).toFixed(2) ;
   total.textContent = "$" + ( (parseInt(subtotalNum)* 0.08 )+ parseInt(subtotalNum)).toFixed(2) ;
   
 };
 
-// const item = {
-//     id:(new Date()).getTime(),
-//        name: name.value,
-//        price: price.value,
-//        image: imgSRC.value,
-//        category:category.value,
-//        description: description.value,
-//    }
 
 
 let gridView = document.getElementById('gridView');
