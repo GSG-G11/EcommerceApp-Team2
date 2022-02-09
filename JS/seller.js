@@ -24,12 +24,20 @@ window.onclick = function(event) {
 };
 
 // create function to save the arrray of object to localstorage
-function addToLocalstorage(arr) {
-    let cardsArray = arr;
+function addToLocalstorage(arr, obj) {
+  let cardsArray = arr;
 
-    // check if theres nothing saved in the storage and if not set the arr of object to cardsArray
-    if (localStorage.getItem("cardsArray") == null) {
-        localStorage.setItem("cardsArray", JSON.stringify(cardsArray));
-    }
+  // check if theres nothing saved in the storage and if not set the arr of object to cardsArray
+  if (localStorage.getItem("cardsArray") == null) {
+    localStorage.setItem("cardsArray", JSON.stringify(cardsArray));
+  }
+  // push new data to the array
+  let old_tasks = JSON.parse(localStorage.getItem("cardsArray"));
+  old_tasks.push(obj);
+
+  // save it to the local storage
+  localStorage.setItem("cardsArray", JSON.stringify(old_tasks));
 }
-addToLocalstorage(addData)
+
+
+
