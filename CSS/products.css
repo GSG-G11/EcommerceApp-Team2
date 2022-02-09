@@ -103,7 +103,7 @@ a {
 
 .search-field img {
     position: absolute;
-    top: 30%;
+    top: 20%;
     right: 36px;
     font-weight: 600;
     width: 15px;
@@ -232,7 +232,7 @@ form {
 
 form select {
     padding: 0.5rem 1rem;
-    width: 10rem;
+    width: 7rem;
     outline: none;
     margin-left: 1rem;
 }
@@ -274,9 +274,9 @@ form select {
 }
 
 .grid .product-price {
-    margin-top: 0.4rem;
+    margin-top: 0.6rem;
     display: inline;
-    margin-right: 8.5rem;
+    font-size: 1rem;
 }
 
 
@@ -320,24 +320,28 @@ form select {
     font-size: 0.9rem;
     margin-top: 0.4rem;
     line-height: 1.4rem;
+    max-width: 80%;
 }
 
 .list .product-price {
     display: inline;
     font-size: 1rem;
-    margin-right: 630px;
 }
 
 .fa-shopping-cart {
     background-color: var(--main-color);
     color: var(--white);
     padding: 0.8rem;
-    margin-top: 0.6rem;
 }
 
 .fa-shopping-cart:hover {
     background-color: #a3d862e7;
     color: var(--dark-gray);
+}
+
+.foot-card {
+    display: flex;
+    justify-content: space-between;
 }
 
 

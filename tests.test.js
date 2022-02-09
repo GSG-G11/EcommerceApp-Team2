@@ -1,4 +1,9 @@
-const { addData, searchByName, filterProduct } = require("./JS/logic.js");
+const {
+    addData,
+    searchByName,
+    deleteCard,
+    editCard,
+} = require("./JS/logic.js");
 
 describe("add data to array", () => {
     test("test add data to the array products", () => {
@@ -26,8 +31,81 @@ describe("search products via name", () => {
     });
 });
 
-describe("Filter products via price and catagory", () => {
-    test("Should return items when filtered by catagory and price", () => {
+describe("delete item from the array", () => {
+    test("test remove item from the array products", () => {
+        const actual = deleteCard(
+            [
+                { id: 1, name: "nabil" },
+                { id: 2, name: "mohamed" },
+                { id: 3, name: "ibrahim" },
+                { id: 4, name: "nada" },
+            ],
+            2
+        );
+        const expected = [
+            { id: 1, name: "nabil" },
+            { id: 3, name: "ibrahim" },
+            { id: 4, name: "nada" },
+        ];
+        expect(actual).toEqual(expected);
+    });
+});
+
+describe("Should Edit Item value", () => {
+    test("Should Edit Item value", () => {
+        const actual = editCard("1", "price", 50.0, [{
+                id: 0,
+                category: "electronics",
+                price: 30.0,
+                productName: "HP Laptop",
+                image: "../assets/images/laptop.jpg",
+            },
+            {
+                id: 1,
+                category: "food",
+                price: 100.0,
+                productName: "Hamburger",
+                image: "../assets/images/hamburger.jpeg",
+            },
+        ]);
+        const expected = [{
+                id: 0,
+                category: "electronics",
+                price: 30.0,
+                productName: "HP Laptop",
+                image: "../assets/images/laptop.jpg",
+            },
+            {
+                id: 1,
+                category: "food",
+                price: 50.0,
+                productName: "Hamburger",
+                image: "../assets/images/hamburger.jpeg",
+            },
+        ];
+        expect(actual).toEqual(expected);
+    });
+});
+
+describe("delete item from the cart array by filtering", () => {
+    test("test remove item from the array products", () => {
+        const actual = removeItem(3, [
+            { id: 1, name: "nabil" },
+            { id: 2, name: "mohamed" },
+            { id: 3, name: "ibrahim" },
+            { id: 4, name: "nada" },
+        ]);
+        const expected = [
+            { id: 1, name: "nabil" },
+            { id: 2, name: "mohamed" },
+            { id: 4, name: "nada" },
+        ];
+        expect(actual).toEqual(expected);
+    });
+});
+
+describe("Filter products via price", () => {
+    test("Should return items when filtered by price", () => {
         const actual = filterProduct("ASC", [{
                 id: 1,
                 name: "Strawberry",
@@ -64,4 +142,4 @@ describe("Filter products via price and catagory", () => {
         ];
         expect(actual).toEqual(expected);
     });
-})
+});

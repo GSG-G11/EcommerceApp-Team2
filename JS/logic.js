@@ -19,4 +19,19 @@ const filterProduct = (price = "", products) => {
         return newProducts.sort((a, b) => b.price - a.price); // sort price to High
 };
 
-module.exports = { addData, searchByName, filterProduct };
+// craete function to delete the card 
+function deleteCard(arr, id) {
+    return arr.filter((item) => {
+        return item.id !== id
+    })
+}
+
+// craete function to edit the card 
+function editCard(id, property, replaceValue, modifiedProducts) {
+    return modifiedProducts.map((ele) => {
+        if (Number(ele.id) === Number(id)) {
+            ele[property] = replaceValue;
+        }
+        return ele;
+    });
+};
