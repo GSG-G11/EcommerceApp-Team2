@@ -10,4 +10,12 @@ function searchByName(array,string) {
    }
 }
  
-module.exports = { addData, searchByName};
+function editCard (id, property, replaceValue, modifiedProducts){
+  return modifiedProducts.map((ele) => {
+    if (Number(ele.id) === Number(id)) {
+      ele[property] = replaceValue;
+    }
+    return ele;
+  });
+};
+module.exports = { addData, searchByName, editCard };
