@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../CSS/products.css">
+    <title>3amo Emad</title>
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="container">
+            <div class="logo">
+                <a href="../HTML/control-panel.html"><img src="../Images/Logo.png" alt="" /></a>
+            </div>
+            <div class="menu">
+                <div class="links">
+                    <a href="../HTML/control-panel.html"><span>Home</span></a>
+                    <a href="#products">Products </a>
+                    <a href="#footer">contacts</a>
+                </div>
+                <div class="search-field">
+                    <input type="text" name="search" id="search-input" />
+                    <img src="../Images/search.svg" alt="search-btn" class="search-img" />
+                </div>
+                <div class="cart-bag">
+                    <img src="../Images/shoppingBag.svg" alt="" />
+                </div>
+            </div>
+            <div class="hamburger-menu">
+                <span class="iconify" data-icon="prime:bars" style="color: #222"></span>
+                <div class="hamburger-links">
+                    <a href="../HTML/control-panel.html">Home</a>
+                    <a href="#products">Products </a>
+                    <a href="#footer">Contacts</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- end nav bar -->
+    <div class="products-container">
+        <div class="sidebar">
+            <h3 class="categeory-title">Category</h3>
+            <ul class="block-cataegory">
+                <li>
+                    <input type="checkbox" name="" id="">
+                    <label for="">Fruits</label>
+                </li>
+                <li>
+                    <input type="checkbox" name="" id="">
+                    <label for="">Legum</label>
+                </li>
+                <li>
+                    <input type="checkbox" name="" id="">
+                    <label for="">Vegetables</label>
+                </li>
+            </ul>
+            <br>
+            <br>
+            <h3 class="categeory-title">Price</h3>
+
+            <ul class="block-cataegory price">
+                <li>
+                    <input type="checkbox" name="" id="">
+                    <label for="">Less than $10</label>
+                </li>
+                <li>
+                    <input type="checkbox" name="" id="">
+                    <label for="">$10 - $20</label>
+                </li>
+                <li>
+                    <input type="checkbox" name="" id="">
+                    <label for="">$20 - $30</label>
+                </li>
+                <li>
+                    <input type="checkbox" name="" id="">
+                    <label for="">$30 - $40</label>
+                </li>
+                <li>
+                    <input type="checkbox" name="" id="">
+                    <label for="">$40 - $50</label>
+                </li>
+            </ul>
+        </div>
+        <!-- ./sidebar -->
+        <div class="products-side">
+            <form action="">
+                <div class="item">
+                    <label for="sort-by">Sort By</label>
+                    <select name="sort-by" id="sort-by">
+                        <option value="category" selected="selected">Category</option>
+                        <option value="number">Price</option>
+                    </select>
+                </div>
+                <!-- ./item -->
+                <div class="item">
+                    <label for="order-by">Order</label>
+                    <select name="order-by" id="sort-by">
+                    <option value="ASC" selected="selected">ASC</option>
+                    <option value="DESC">DESC</option>
+                  </select>
+                </div>
+                <!-- ./item -->
+                <button class="apply-btn">Apply</button>
+                <i class="fas fa-th" id="gridView"></i>
+                <i class="fas fa-list" id="listView"></i>
+            </form>
+
+            <div class="products grid">
+                <!-- /* we will add these products using JS */ -->
+                <!-- ./product -->
+                <div class="product">
+                    <img class="product-img " src=" ../Images/product-1.jpg " alt="Product Item ">
+                    <div class="details">
+                        <h4 class="product-name ">Manjo Maya</h4>
+                        <p class="product-desc ">Lorem ipsum dolor sit amet consct, etur adipiscing elit Nunc vulputate etur adipiscing elit Nunc vulputate. </p>
+                        <div class="foot-card">
+                            <h5 class="product-price ">$2.00</h5>
+                            <i class="fas fa-shopping-cart "></i></div>
+                    </div>
+                </div>
+                <!-- ./product -->
+                <div class="product">
+                    <img class="product-img " src=" ../Images/product-1.jpg " alt="Product Item ">
+                    <div class="details">
+                        <h4 class="product-name ">Manjo Maya</h4>
+                        <p class="product-desc ">Lorem ipsum dolor sit amet consct, etur adipiscing elit Nunc vulputate etur adipiscing elit Nunc vulputate. </p>
+                        <div class="foot-card">
+                            <h5 class="product-price ">$2.00</h5>
+                            <i class="fas fa-shopping-cart "></i></div>
+                    </div>
+                </div>
+                <!-- ./product -->
+
+            </div>
+        </div>
+        <!-- ./products-side -->
+    </div>
+    <!-- ./products-container -->
+    <!--start footer -->
+    <footer class="footer">
+        <div class="footer-list">
+            <h3>Extras</h3>
+            <p class="foo-item">Brand</p>
+            <p class="foo-item">specials</p>
+        </div>
+        <div class="footer-list">
+            <h3>Information</h3>
+            <p class="foo-item">about us</p>
+            <p class="foo-item">contact us</p>
+        </div>
+        <div class="footer-list">
+            <h3>Account</h3>
+            <p class="foo-item">my account</p>
+            <p class="foo-item">wish list</p>
+        </div>
+    </footer>
+    <!--end footer -->
+    <!-- Font Awesome Script -->
+    <script>
+        function fontAwesome() {
+            const css = document.createElement('link');
+            css.href = 'https://pro.fontawesome.com/releases/v6.0.0-beta3/css/all.css';
+            css.rel = 'stylesheet';
+            css.type = 'text/css';
+            document.getElementsByTagName('head')[0].appendChild(css);
+        }
+        fontAwesome();
+    </script>
+    <script src="../JS/dom.js"></script>
+</body>
+
+</html>
