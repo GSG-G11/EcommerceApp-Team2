@@ -3,6 +3,9 @@ const {
     searchByName,
     deleteCard,
     editCard,
+    removeItem,
+    filterProduct,
+    newFiltered
 } = require("./JS/logic.js");
 
 describe("add data to array", () => {
