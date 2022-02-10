@@ -1,13 +1,3 @@
-function boxesCheck() {
-    let ARRR = newFiltered(data);
-    // console.log(newArray)
-    const checkbox = document.querySelectorAll("input[type=checkbox]");
-    console.log(checkbox);
-    checkbox.addEventListener("change", function() {});
-}
-
-boxesCheck();
-
 let gridView = document.getElementById('gridView');
 let listView = document.getElementById('listView');
 let productss = document.getElementsByClassName('products')[0];
